@@ -1,3 +1,10 @@
+Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    with.test_framework :rspec
+    with.library :rails
+  end
+end
+
 Dir[Rails.root.join('spec/support/**/*.rb')].each {|f| require f}
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
